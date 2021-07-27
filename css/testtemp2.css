@@ -1,0 +1,129 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+.unstayle-list{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --main-color: #7b5244;
+    --supcolor:#333;
+
+}
+
+/* header */
+.container{
+    width: 80%;
+    margin: auto;
+}
+.header{
+    padding: 30px 0;
+}
+.header .head-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-content .logo-img{
+   flex: 1;
+   max-width: 150px;
+   text-align: center;
+}
+.head-content .navbar{
+   flex: 3;
+   text-align: center;
+}
+.head-content .navbar ul li a{
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+    color: var(--supcolor);
+}
+.head-content ul li{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.head-content .navbar .unstayle-list li a{
+    color: var(--supcolor);
+    position: relative;
+}
+.head-content .navbar .unstayle-list li a::before{
+    content: "";
+    position: absolute;
+    border-width: 0 2px;
+    border-color: var(--main-color);
+    border-style: solid;
+    width: 96%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: scale3d(1,0,1);
+    transition: transform 0.3s;
+    transform-origin: left;
+    transition-delay: 0.2s;
+}
+.head-content .navbar .unstayle-list li a:hover::before{
+    transform: scale3d(1,1,1);
+}
+.head-content .navbar .unstayle-list li a::after{
+    content: "";
+    position: absolute;
+    border-width: 2px 0;
+    border-color: var(--main-color);
+    border-style: solid;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    right: 0;
+    transform: scale3d(0,1,1);
+    transition: transform 0.3s;
+    transform-origin: left;
+}
+.head-content .navbar .unstayle-list li a:hover::after{
+    transform: scale3d(1,1,1);
+}
+.head-content .login{
+    flex: 1;
+}
+.head-content .login .unstayle-list li{
+    justify-content: right;
+    color: var(--supcolor);
+    padding: 6px;
+    font-weight: bold;
+}
+
+.head-content .login .unstayle-list li:last-child i{
+    margin-right: 10px;
+    position: relative;
+}
+.head-content .login .unstayle-list li:last-child i::after{
+    content: "0";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    font-size: 15px;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+   right: -11px;
+   bottom: 0px;
+   
+}
+
+
+
+
+/* slider section */
+.slider .container img{
+   width: 100%;
+}
